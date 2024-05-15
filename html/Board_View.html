@@ -1,42 +1,39 @@
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/CSS.css?after">
+
+    <div id = "LOGO">
+        <button id="logoutButton" onclick="location.href='/logout'">Logout</button>
+        <style> #LOGO_ {position: absolute; left: 50%; transform: translateX(-50%)}</style> <h1 id = "LOGO_"><a href="/">LOGO</a></h1>
+    </div>
 </head>
-
-<style>
-    .Board
-    {
-        position : absolute;
-        top : 50%;
-        align-content : center;
-    }
-
-    .LOGO
-    {
-        position: absolute;
-        left: 5px;
-    }
-
-</style>
-
 <body>
-    <div class="Board">
-    <div class = "LOGO">
-    <h1><a href="/">LOGO</a></h1>
+    <img id="background" src="https://fancycrave.com/wp-content/uploads/2019/02/Amazing-Aerial-View-of-the-New-York-City-Skyline.jpg"/>
+
+    <div class="container">
+        <div class="container_margin">
+            <h2>게시판 보기</h2>
+            <ul>
+                <li>
+                    제  목 : {{content.subject}}
+                </li>
+                <li>
+                    작성자 : {{content.username}}
+                </li>
+                <li>
+                    작성일 : {{content.date}}
+                </li>
+            </ul>
+            <a href="/board/list">목록</a>
+        </div>
     </div>
-    <div>
-    <h2>게시판 보기</h2>
-    <ul>
-        <li>
-            제목 : 질문 있습니다.
-        </li>
-        <li>
-            작성자 : podo
-        </li>
-        <li>
-            작성일 : 2022-02-03
-        </li>
-    </ul>
-    <a href="/board/list">목록</a>
-    </div>
-    </div>
+    <footer>
+        <div class="eye-container">
+                <div class="eyeBall">
+                    <div class="pupil"></div>
+                </div>
+         </div>
+    </footer>
+    <script src="/animationjs/animation.js">
+    </script>
 </body>

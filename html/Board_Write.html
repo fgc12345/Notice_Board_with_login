@@ -1,27 +1,46 @@
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/CSS.css?after">
+
+    <div id = "LOGO">
+        <button id="logoutButton" onclick="location.href='/logout'">Logout</button>
+       <style> #LOGO_ {position: absolute; left: 50%; transform: translateX(-50%)}</style> <h1 id = "LOGO_"><a href="/">LOGO</a></h1>
+    </div>
 </head>
 
 
 <body>
+    <img id="background" src="https://fancycrave.com/wp-content/uploads/2019/02/Amazing-Aerial-View-of-the-New-York-City-Skyline.jpg"/>
 
-    <h1 class = "LOGO"><a href="/">LOGO</a></h1>
-    <h2>게시판 글쓰기</h2>
-    <form method="post" action="/board/write">
-        <ul>
-            <li>
-                제목: <input type="text" name="subject">
-            </li>
-            <li>
-                작성자: <input type="text" name="username">
-            </li>
-            <li>
-                작성일: <input type="text" name="date">
-            </li>
-        </ul>
-        <input type="submit" value="작성하기">
-    </form>
 
+    <div class = "container">
+        <div class = "container_margin">
+            <h2>게시판 글쓰기</h2>
+            <form method="post" action="/board/write">
+                <ul>
+                    <li>
+                        제  목: <input type="text" name="subject">
+                    </li>
+                    <li>
+                        작성자: <input type="text" name="username">
+                    </li>
+                    <li>
+                        작성일: <input type="text" name="date">
+                    </li>
+                </ul>
+                <input type="submit" value="작성하기">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="eye-container">
+                <div class="eyeBall">
+                    <div class="pupil"></div>
+                </div>
+         </div>
+    </footer>
+    <script src="/animationjs/animation.js">
+    </script>
 </body>
 
 <!--제목, 작성자, 작성일

@@ -1,35 +1,50 @@
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/CSS.css?after">
+
+    <div id = "LOGO">
+        <button id="logoutButton" onclick="location.href='/logout'">Logout</button>
+        <style> #LOGO_ {position: absolute; left: 50%; transform: translateX(-50%)}</style> <h1 id = "LOGO_"><a href="/">LOGO</a></h1>
+    </div>
 </head>
 
-<style>
-    div {
-        text-align: center;
-    }
-</style>
 <body>
-    <h1 class = "LOGO"><a href="/">LOGO</a></h1>
+    <img id="background" src="https://fancycrave.com/wp-content/uploads/2019/02/Amazing-Aerial-View-of-the-New-York-City-Skyline.jpg"/>
+
+    <div class = "container">
+    <div class="container_margin">
     <h2>게시판 리스트</h2>
     <table>
         <tr>
-            <td>번호</td>
-            <td>제목</td>
+            <td>번  호</td>
+            <td>제  목</td>
             <td>작성자</td>
             <td>작성일</td>
         </tr>
         {% for item in content %}
         <tr>
             <td>{{item.num}}</td>
-            <td>{{item.subject}}</td>
+            <td><a href="/board/view/{{item.num}}">{{item.subject}}</a></td>
             <td>{{item.username}}</td>
             <td>{{item.date}}</td>
             <td><button onclick="location.href='reWrite/{{item.num}}';">수정</button></td>
-            <td><button onclick="location.href='/delete/:{{item.num}}';">삭제</button></td>
+            <td><button onclick="location.href='/delete/{{item.num}}';">삭제</button></td>
         </tr>
         {% endfor %}
 
 
         <a href="/board/write">글쓰기</a>
     </table>
-    <script src = '../js/practice.js'></script>
+    <script src = '../init.js'></script>
+    </div>
+    </div>
+    <footer>
+        <div class="eye-container">
+                <div class="eyeBall">
+                    <div class="pupil"></div>
+                </div>
+         </div>
+    </footer>
+    <script src="/animationjs/animation.js">
+    </script>
 </body>
